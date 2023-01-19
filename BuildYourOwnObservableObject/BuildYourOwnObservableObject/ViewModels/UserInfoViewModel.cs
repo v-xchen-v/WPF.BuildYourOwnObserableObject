@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BuildYourOwnObservableObject.ViewModels
 {
-    internal class UserInfoViewModel : INotifyPropertyChanged
+    internal class UserInfoViewModel : ObservableObject
     {
         private string _firstName;
         private string _lastName;
@@ -60,12 +60,6 @@ namespace BuildYourOwnObservableObject.ViewModels
                     Thread.Sleep(500);
                 }
             });
-        }
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
