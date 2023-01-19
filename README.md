@@ -1,1 +1,1 @@
-# WPF.BuildYourOwnObserableObject
+# WPF.BuildYourOwnObservableObject
