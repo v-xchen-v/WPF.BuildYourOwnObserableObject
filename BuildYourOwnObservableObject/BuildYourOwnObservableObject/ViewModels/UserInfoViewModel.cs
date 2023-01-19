@@ -10,13 +10,12 @@ using System.Threading.Tasks;
 
 namespace BuildYourOwnObservableObject.ViewModels
 {
-    internal class UserInfoViewModel : INotifyPropertyChanged
+    internal class UserInfoViewModel/* : INotifyPropertyChanged*/
     {
         private string _firstName;
         private string _lastName;
 
 
-        /*
         public string FirstName
         {
             get { return _firstName; }
@@ -27,9 +26,6 @@ namespace BuildYourOwnObservableObject.ViewModels
                 //OnPropertyChanged(this, new PropertyChangedEventArgs(nameof(FullName)));
             }
         }
-        */
-
-        public string FirstName { get; set; }
 
         public string LastName
         {
