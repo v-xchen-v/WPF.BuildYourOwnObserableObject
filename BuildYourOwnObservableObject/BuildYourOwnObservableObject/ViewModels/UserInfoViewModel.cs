@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BuildYourOwnObservableObject.ViewModels
 {
-    internal class UserInfoViewModel : INotifyPropertyChanged
+    internal class UserInfoViewModel/* : INotifyPropertyChanged*/
     {
         private string _firstName;
         private string _lastName;
@@ -51,7 +51,7 @@ namespace BuildYourOwnObservableObject.ViewModels
             {
                 while (true)
                 {
-                    //FirstName = new Random().Next(1, 1000).ToString();
+                    FirstName = new Random().Next(1, 1000).ToString();
                     Debug.WriteLine($"FirstName: {FirstName}");
                     Debug.WriteLine($"LastName: {LastName}");
                     Debug.WriteLine($"FullName: {FullName}");
