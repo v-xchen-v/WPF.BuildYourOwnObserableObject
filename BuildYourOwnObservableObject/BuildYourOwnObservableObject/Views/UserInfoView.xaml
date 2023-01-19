@@ -14,7 +14,7 @@
             <TextBox Background="LightGray" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
             <TextBox Background="LightGray" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
             <Label Background="AliceBlue" Content="{Binding FullName}" />
-            <Label Background="AliceBlue" Content="{Binding FirstName}" />
+            <!--<Label Background="AliceBlue" Content="{Binding FirstName}" />-->
         </StackPanel>
     </Grid>
 </UserControl>
