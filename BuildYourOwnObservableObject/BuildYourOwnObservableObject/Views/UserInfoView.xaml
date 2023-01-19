@@ -12,8 +12,9 @@
         <StackPanel Width="300">
             <!--<TextBox Background="LightGray" Text="{Binding FirstName" />-->
             <TextBox Background="LightGray" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+            <!--<TextBox Background="LightGray" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Background="AliceBlue" Content="{Binding FullName}" />-->
             <Label Background="AliceBlue" Content="{Binding FirstName}" />
-            <TextBox Background="LightGray" />
         </StackPanel>
     </Grid>
 </UserControl>
