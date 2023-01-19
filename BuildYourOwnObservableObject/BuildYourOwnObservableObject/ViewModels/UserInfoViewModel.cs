@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO.Pipes;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace BuildYourOwnObservableObject.ViewModels
             set
             {
                 _firstName = value;
-                OnPropertyChanged(nameof(FirstName));
+                OnPropertyChanged();
                 OnPropertyChanged(nameof(FullName));
             }
         }
@@ -33,7 +34,7 @@ namespace BuildYourOwnObservableObject.ViewModels
             set
             {
                 _lastName = value;
-                OnPropertyChanged(nameof(LastName));
+                OnPropertyChanged();
                 OnPropertyChanged(nameof(FullName));
             }
         }
@@ -62,7 +63,7 @@ namespace BuildYourOwnObservableObject.ViewModels
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged(string propertyName = null)
+        public void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
