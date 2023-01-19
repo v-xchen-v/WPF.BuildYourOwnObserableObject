@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BuildYourOwnObservableObject.ViewModels
 {
-    internal class UserInfoViewModel/* : INotifyPropertyChanged*/
+    internal class UserInfoViewModel : INotifyPropertyChanged
     {
         private string _firstName;
         private string _lastName;
