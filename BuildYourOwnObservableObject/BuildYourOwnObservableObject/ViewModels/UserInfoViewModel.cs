@@ -22,8 +22,8 @@ namespace BuildYourOwnObservableObject.ViewModels
             set
             {
                 _firstName = value;
-                OnPropertyChanged(this, nameof(FirstName));
-                OnPropertyChanged(this, nameof(FullName));
+                OnPropertyChanged(nameof(FirstName));
+                OnPropertyChanged(nameof(FullName));
             }
         }
 
@@ -33,8 +33,8 @@ namespace BuildYourOwnObservableObject.ViewModels
             set
             {
                 _lastName = value;
-                OnPropertyChanged(this, nameof(LastName));
-                OnPropertyChanged(this, nameof(FullName));
+                OnPropertyChanged(nameof(LastName));
+                OnPropertyChanged(nameof(FullName));
             }
         }
 
@@ -62,12 +62,9 @@ namespace BuildYourOwnObservableObject.ViewModels
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        public void OnPropertyChanged(object sender, string propertyName = null)
+        public void OnPropertyChanged(string propertyName = null)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged.Invoke(sender, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
